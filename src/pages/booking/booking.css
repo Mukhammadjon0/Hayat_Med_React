@@ -1,0 +1,131 @@
+.logus__body {
+   display: flex;
+}
+
+.expectation__main {
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   width: 82%;
+}
+
+.booking__top-box {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.booking__heading-box {
+   display: flex;
+   width: 100%;
+   max-width: 280px;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.booking__heading-btn {
+   display: block;
+   padding: 4px 8px;
+   border-radius: 3px;
+   border: 1px solid rgba(0, 0, 0, 0.38);
+   background: #f8ed8d;
+   color: rgba(0, 0, 0, 0.38);
+   font-family: Roboto;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 20px;
+   letter-spacing: 0.15px;
+}
+
+.booking__top-btn {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   max-width: 400px;
+}
+
+.booking_top_btn {
+   display: block;
+   padding: 4px 16px;
+   border-radius: 4px;
+   border: none;
+   background: #eee;
+}
+
+.booking__detail-box {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   margin-bottom: 10px;
+   padding: 4px 10px;
+   background: #f5f5f5;
+}
+
+.booking_input_bg {
+   background-image: url("../../assets/icons/file.svg") !important;
+   background-repeat: no-repeat !important;
+   background-position: 310px center !important;
+}
+
+.nav-tabs {
+   width: 100%;
+   margin-top: 10px;
+   margin-bottom: 10px !important;
+   padding: 0 10px !important;
+}
+
+.nav-tabs a {
+   text-decoration: none;
+}
+
+.nav-tabs .nav-link {
+   margin: 0 1px !important;
+   padding: 20px !important;
+   color: rgba(0, 0, 0, 0.87) !important;
+   background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.nav-tabs .active {
+   background: rgba(51, 151, 255, 1) !important;
+   color: #ffffff !important;
+}
+
+.green__btn {
+   border-radius: 0.25rem;
+   background: #4caf50;
+   color: white;
+   font-weight: 400;
+   line-height: 1.25rem;
+   letter-spacing: 0.00938rem;
+   font-size: 0.875rem;
+   padding: 2px 12px;
+   border: none;
+}
+
+.blue__btn {
+   border-radius: 0.25rem;
+   background: #2196f3 !important;
+   color: white !important;
+   font-weight: 400 !important;
+   line-height: 1.25rem !important;
+   letter-spacing: 0.00938rem !important;
+   font-size: 0.875rem !important;
+   padding: 2px 12px;
+   cursor: pointer;
+   border: none !important;
+}
+
+.blue__btn-disabled {
+   border-radius: 0.25rem;
+   background: #64b6f7;
+   color: white;
+   font-weight: 400;
+   line-height: 1.25rem;
+   letter-spacing: 0.00938rem;
+   font-size: 0.875rem;
+   padding: 2px 12px;
+   border: none;
+}
