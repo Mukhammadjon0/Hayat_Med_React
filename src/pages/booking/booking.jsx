@@ -236,7 +236,7 @@ function Booking() {
 
 					<ul className='nav nav-tabs' id='myTab' role='tablist'>
 						<li className='nav-item' role='presentation'>
-							<a href='booking.html'>
+							<a href='/booking'>
 								<button
 									className='nav-link active'
 									id='home-tab'
@@ -251,7 +251,7 @@ function Booking() {
 							</a>
 						</li>
 						<li className='nav-item' role='presentation'>
-							<a href='guests.html'>
+							<a href='/guests'>
 								<button
 									className='nav-link'
 									id='profile-tab'
