@@ -24,11 +24,6 @@ table thead tr th {
    padding: 4px;
 }
 
-table tbody {
-   /* overflow-y: scroll;
-   height: 520px; */
-}
-
 table tbody tr td {
    outline: 1px solid rgb(176, 176, 176) !important;
    padding: 6px;

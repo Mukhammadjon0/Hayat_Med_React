@@ -615,7 +615,7 @@ function Booking() {
 						style={{
 							display: 'flex',
 							justifyContent: 'space-between',
-							padding: 8,
+							padding: "8px",
 							border: '1px solid var(--light, rgba(0, 0, 0, 0.1))',
 						}}>
 						<div className='d-flex gap-2'>

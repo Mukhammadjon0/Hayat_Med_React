@@ -1,4 +1,4 @@
-import './guests.css';
+import './guestsDocs.css';
 import Header from '../../components/header/header';
 import Navbar from '../../components/navbar/navbar';
 
@@ -8,27 +8,11 @@ import FileCopy from '../../assets/icons/file-copy.svg';
 import Refresh from '../../assets/icons/refresh-ccw-clock.svg';
 import Printer from '../../assets/icons/printer.svg';
 
-function Guests() {
-	const handleChange = (selected) => {
-		const label1 = document.getElementById('label1');
-		const label2 = document.getElementById('label2');
-
-		if (selected === 1) {
-			label1.classList.add('green__btn');
-			label2.classList.remove('green__btn');
-			label1.classList.remove('check__btn');
-			label2.classList.add('check__btn');
-		} else {
-			label1.classList.remove('green__btn');
-			label2.classList.add('green__btn');
-			label1.classList.add('check__btn');
-			label2.classList.remove('check__btn');
-		}
-	};
-
+function GuestsDocs() {
 	return (
 		<>
 			<Header />
+
 			<div className='logus__body'>
 				<Navbar />
 
@@ -540,6 +524,7 @@ function Guests() {
 								</div>
 							</div>
 						</div>
+
 						<div
 							className='d-flex flex-column'
 							style={{ marginLeft: '10px' }}>
@@ -647,9 +632,9 @@ function Guests() {
 
 							<ul className='nav nav-tabs' id='myTab' role='tablist'>
 								<li className='nav-item' role='presentation'>
-									<a href='guests.html'>
+									<a href='/guests'>
 										<button
-											className='nav-link active p-0'
+											className='nav-link p-0'
 											style={{ padding: '8px 15px !important' }}
 											id='home-tab'
 											data-bs-toggle='tab'
@@ -663,10 +648,10 @@ function Guests() {
 									</a>
 								</li>
 								<li className='nav-item' role='presentation'>
-									<a href='guests-docs.html'>
+									<a href='/guests-docs'>
 										<button
 											style={{ padding: '8px 15px !important' }}
-											className='nav-link'
+											className='nav-link active'
 											id='profile-tab'
 											data-bs-toggle='tab'
 											data-bs-target='#profile-tab-pane'
@@ -680,184 +665,20 @@ function Guests() {
 								</li>
 							</ul>
 
-							<div
-								className='d-flex justify-content-between gap-2 mb-3'
-								style={{ padding: '0 12px' }}>
-								<div
-									className='d-flex flex-column'
-									style={{ width: '250px' }}>
-									<label
-										htmlFor=''
-										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Фамилия
-									</label>
-									<input
-										type='text'
-										style={{
-											width: '100%',
-											padding: 5,
-											border: '1px solid rgba(0, 0, 0, 0.23)',
-										}}
-									/>
-								</div>
-
-								<div
-									className='d-flex flex-column'
-									style={{ width: '250px' }}>
-									<label
-										htmlFor=''
-										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Имя
-									</label>
-									<input
-										type='text'
-										style={{
-											width: '100%',
-											padding: '5px',
-											border: '1px solid rgba(0, 0, 0, 0.23)',
-										}}
-									/>
-								</div>
-
-								<div
-									className='d-flex flex-column'
-									style={{ width: '250px' }}>
-									<label
-										htmlFor=''
-										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Отчество
-									</label>
-									<input
-										type='text'
-										style={{
-											width: '100%',
-											padding: '5px',
-											border: '1px solid rgba(0, 0, 0, 0.23)',
-										}}
-									/>
-								</div>
-
-								<div
-									className='d-flex flex-column'
-									style={{ width: '250px' }}>
-									<label
-										htmlFor=''
-										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Обращение
-									</label>
-									<input
-										type='text'
-										style={{
-											width: '100%',
-											padding: '5px',
-											border: '1px solid rgba(0, 0, 0, 0.23)',
-										}}
-									/>
-								</div>
-							</div>
+							<h2
+								className='mb-2'
+								style={{
+									padding: '0 12px',
+									margin: '0',
+									fontFamily: 'Roboto',
+									fontSize: '15px',
+									fontStyle: 'normal',
+								}}>
+								Документ
+							</h2>
 
 							<div
-								className='d-flex justify-content-between gap-2 align-items-end mb-3'
-								style={{ padding: '0 12px' }}>
-								<div className='d-flex flex-column'>
-									<label
-										htmlFor=''
-										className='mb-1'
-										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Пол:
-									</label>
-									<div className='d-flex gap-2'>
-										<div
-											className='form-check check__btn'
-											id='label1'
-											style={{ paddingLeft: '24px' }}>
-											<input
-												className='form-check-input'
-												type='radio'
-												name='flexRadioDefault'
-												id='flexRadioDefault1'
-												onClick={() => {
-													handleChange(1);
-												}}
-											/>
-											<label htmlFor='flexRadioDefault1'>
-												[М] Мужской
-											</label>
-										</div>
-										<div
-											className='form-check green__btn'
-											id='label2'
-											style={{ paddingLeft: '24px' }}>
-											<input
-												className='form-check-input'
-												type='radio'
-												name='flexRadioDefault'
-												id='flexRadioDefault2'
-												onClick={() => {
-													handleChange(2);
-												}}
-												checked={true}
-											/>
-											<label htmlFor='flexRadioDefault2'>
-												[Ж] Женский
-											</label>
-										</div>
-									</div>
-								</div>
-
-								<div
-									className='d-flex flex-column'
-									style={{ width: '250px' }}>
-									<label
-										htmlFor=''
-										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										E-mail
-									</label>
-									<input
-										type='text'
-										style={{
-											width: '100%',
-											padding: '5px',
-											border: '1px solid rgba(0, 0, 0, 0.23)',
-										}}
-									/>
-								</div>
-
-								<div
-									className='d-flex flex-column'
-									style={{ width: '250px' }}>
-									<label
-										htmlFor=''
-										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Номер телефона
-									</label>
-									<input
-										type='text'
-										style={{
-											width: '100%',
-											padding: '5px',
-											border: '1px solid rgba(0, 0, 0, 0.23)',
-										}}
-									/>
-								</div>
-
-								<div className='form-check form-switch'>
-									<input
-										className='form-check-input'
-										type='checkbox'
-										role='switch'
-										id='flexSwitchCheckDefault'
-									/>
-									<label
-										className='form-check-label'
-										htmlFor='flexSwitchCheckDefault'>
-										уведомлять по СМС
-									</label>
-								</div>
-							</div>
-
-							<div
-								className='d-flex justify-content-between gap-2 mb-3'
+								className='d-flex justify-content-between gap-2 mb-2'
 								style={{ padding: '0 12px' }}>
 								<div
 									className='d-flex flex-column'
@@ -865,7 +686,7 @@ function Guests() {
 									<label
 										htmlFor=''
 										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Дата рождения
+										Документ
 									</label>
 									<select
 										name=''
@@ -875,49 +696,36 @@ function Guests() {
 											padding: '5px',
 											border: '1px solid rgba(0, 0, 0, 0.23)',
 										}}>
-										<option value={true}>07.04.1997</option>
+										<option value={true} />
 										<option value={true} />
 									</select>
 								</div>
 
-								<div className='d-flex gap-2 align-items-end'>
-									<p
-										className='mb-2'
+								<div
+									className='d-flex flex-column'
+									style={{ width: '100px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Серия
+									</label>
+									<input
+										type='text'
 										style={{
-											margin: '0',
-											color: 'rgba(0, 0, 0, 0.54)',
-										}}>
-										26 лет
-									</p>
-									<div
-										className='d-flex flex-column'
-										style={{ width: '200px' }}>
-										<label
-											htmlFor=''
-											style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-											Язык
-										</label>
-										<select
-											name=''
-											id=''
-											style={{
-												width: '100%',
-												padding: '5px',
-												border: '1px solid rgba(0, 0, 0, 0.23)',
-											}}>
-											<option value={true} />
-											<option value={true} />
-										</select>
-									</div>
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
 								</div>
 
 								<div
 									className='d-flex flex-column'
-									style={{ width: '250px' }}>
+									style={{ width: '120px' }}>
 									<label
 										htmlFor=''
 										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Автомобиль
+										Номер
 									</label>
 									<input
 										type='text'
@@ -935,32 +743,7 @@ function Guests() {
 									<label
 										htmlFor=''
 										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Цель поездки
-									</label>
-									<select
-										name=''
-										id=''
-										style={{
-											width: '100%',
-											padding: '5px',
-											border: '1px solid rgba(0, 0, 0, 0.23)',
-										}}>
-										<option value={true} />
-										<option value={true} />
-									</select>
-								</div>
-							</div>
-
-							<div
-								className='d-flex justify-content-between gap-2 mb-3'
-								style={{ padding: '0 12px' }}>
-								<div
-									className='d-flex flex-column'
-									style={{ width: '250px' }}>
-									<label
-										htmlFor=''
-										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Законный представитель
+										Код подразделения
 									</label>
 									<input
 										type='text'
@@ -978,7 +761,392 @@ function Guests() {
 									<label
 										htmlFor=''
 										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Ответственное лицо
+										Дата выдачи
+									</label>
+									<input
+										type='date'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '200px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Истекает
+									</label>
+									<input
+										type='date'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+							</div>
+
+							<div
+								className='d-flex justify-content-between gap-2 mb-3'
+								style={{ padding: '0 12px' }}>
+								<div
+									className='d-flex flex-column'
+									style={{ width: '20%' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Дата регисграции
+									</label>
+									<input
+										type='date'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '80%' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Кем выдан
+									</label>
+									<input
+										type='text'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+							</div>
+
+							<h2
+								className='mb-2'
+								style={{
+									padding: '0 12px',
+									margin: '0',
+									fontFamily: 'Roboto',
+									fontSize: '15px',
+									fontStyle: 'normal',
+								}}>
+								Регистрационный адрес
+							</h2>
+
+							<div
+								className='d-flex justify-content-between gap-2 mb-2'
+								style={{ padding: '8px 12px', background: '#F8ED8D' }}>
+								<div
+									className='d-flex flex-column'
+									style={{ width: '100%' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Быстрый поиск и автозаполнение адреса
+									</label>
+									<select
+										name=''
+										id=''
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}>
+										<option value={true} />
+										<option value={true} />
+									</select>
+								</div>
+							</div>
+
+							<div
+								className='d-flex justify-content-between gap-2 mb-2'
+								style={{ padding: '0 12px' }}>
+								<div
+									className='d-flex flex-column'
+									style={{ width: '200px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Гражданство
+									</label>
+									<select
+										name=''
+										id=''
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}>
+										<option value={true} />
+										<option value={true} />
+									</select>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '200px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Страна
+									</label>
+									<select
+										name=''
+										id=''
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}>
+										<option value={true} />
+										<option value={true} />
+									</select>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '200px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Индекс
+									</label>
+									<input
+										type='text'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '200px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Область
+									</label>
+									<input
+										type='text'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '200px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Район
+									</label>
+									<input
+										type='text'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+							</div>
+
+							<div
+								className='d-flex justify-content-between gap-2 mb-2'
+								style={{ padding: '0 12px' }}>
+								<div
+									className='d-flex flex-column'
+									style={{ width: '200px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Тип населенного пункта
+									</label>
+									<input
+										type='text'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '200px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Название нас. пункта
+									</label>
+									<input
+										type='text'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '200px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Улица
+									</label>
+									<input
+										type='text'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '100px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Дом
+									</label>
+									<input
+										type='text'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '100px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Корпус
+									</label>
+									<input
+										type='text'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '100px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Строение
+									</label>
+									<input
+										type='text'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+
+								<div
+									className='d-flex flex-column'
+									style={{ width: '100px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Квартира
+									</label>
+									<input
+										type='text'
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}
+									/>
+								</div>
+							</div>
+
+							<h2
+								className='mb-2'
+								style={{
+									padding: '0 12px',
+									margin: '0',
+									fontFamily: 'Roboto',
+									fontSize: '15px',
+									fontStyle: 'normal',
+								}}>
+								Регистрационный адрес
+							</h2>
+
+							<div
+								className='d-flex justify-content-between gap-2 mb-2'
+								style={{ padding: '8px 12px', background: '#F8ED8D' }}>
+								<div
+									className='d-flex flex-column'
+									style={{ width: '100%' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Введите название населённого пункта для
+										автозаполнения места рождения
+									</label>
+									<select
+										name=''
+										id=''
+										style={{
+											width: '100%',
+											padding: '5px',
+											border: '1px solid rgba(0, 0, 0, 0.23)',
+										}}>
+										<option value={true} />
+										<option value={true} />
+									</select>
+								</div>
+							</div>
+
+							<div
+								className='d-flex justify-content-between gap-2 mb-2'
+								style={{ padding: '8px 12px' }}>
+								<div
+									className='d-flex flex-column'
+									style={{ width: '250px' }}>
+									<label
+										htmlFor=''
+										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
+										Страна
 									</label>
 									<select
 										name=''
@@ -999,7 +1167,7 @@ function Guests() {
 									<label
 										htmlFor=''
 										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Предыдущее место пребывания
+										Область
 									</label>
 									<input
 										type='text'
@@ -1017,7 +1185,7 @@ function Guests() {
 									<label
 										htmlFor=''
 										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										ИНН
+										Тип населенного пункта
 									</label>
 									<input
 										type='text'
@@ -1028,134 +1196,28 @@ function Guests() {
 										}}
 									/>
 								</div>
-							</div>
 
-							<div
-								className='d-flex justify-content-between gap-2 mb-3'
-								style={{ padding: '0 12px' }}>
 								<div
 									className='d-flex flex-column'
-									style={{ width: '50%' }}>
+									style={{ width: '250px' }}>
 									<label
 										htmlFor=''
 										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Примечание
+										Название нас. пункта
 									</label>
-									<textarea
+									<input
 										type='text'
-										rows={5}
 										style={{
 											width: '100%',
 											padding: '5px',
 											border: '1px solid rgba(0, 0, 0, 0.23)',
 										}}
 									/>
-								</div>
-
-								<div
-									className='d-flex flex-column'
-									style={{ width: '50%' }}>
-									<label
-										htmlFor=''
-										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Результат отправки в ФМС (ДОПОЛНИТЕЛЬНЬЮ ПОЛЯ)
-									</label>
-									<textarea
-										type='text'
-										rows={5}
-										style={{
-											width: '100%',
-											padding: '5px',
-											border: '1px solid rgba(0, 0, 0, 0.23)',
-										}}
-									/>
-								</div>
-							</div>
-
-							<div
-								className='d-flex justify-content-between'
-								style={{ width: '50%' }}>
-								<p
-									className='mb-2'
-									style={{
-										margin: '0',
-										color: 'rgba(0, 0, 0, 0.54)',
-									}}>
-									Телефоны
-								</p>
-
-								<div className='d-flex gap-2'>
-									<p className='mb-2' style={{ margin: '0' }}>
-										Добавить
-									</p>
-									<p className='mb-2' style={{ margin: '0' }}>
-										Удалить
-									</p>
-								</div>
-							</div>
-
-							<div className='d-flex justify-content-between mb-3 gap-2'>
-								<div style={{ width: '50% !important' }}>
-									<table style={{ width: '100%' }}>
-										<thead style={{ background: 'transparent' }}>
-											<tr
-												style={{
-													background: 'transparent !important',
-												}}>
-												<th style={{ background: 'transparent' }}>
-													Тип номера
-												</th>
-												<th style={{ background: 'transparent' }}>
-													Номер телефона
-												</th>
-											</tr>
-										</thead>
-
-										<tbody>
-											<tr>
-												<td />
-												<td style={{ background: '#64B6F7' }}>
-													998998465592
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-								<div>
-									<label
-										htmlFor=''
-										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Запрет начислений
-									</label>
-									<div className='form-check form-switch'>
-										<input
-											className='form-check-input'
-											type='checkbox'
-											role='switch'
-											id='flexSwitchCheckDefault'
-										/>
-										<label
-											className='form-check-label'
-											htmlFor='flexSwitchCheckDefault'>
-											Запрет начислений
-										</label>
-									</div>
-								</div>
-
-								<div>
-									<label
-										htmlFor=''
-										style={{ color: 'rgba(0, 0, 0, 0.54)' }}>
-										Guid
-									</label>
-									<p style={{ margin: '0' }}>
-										b598db7f-fd51-413f-aSe6-f341Sd30d36d
-									</p>
 								</div>
 							</div>
 						</div>
 					</div>
+
 					<div
 						style={{
 							display: 'flex',
@@ -1264,4 +1326,4 @@ function Guests() {
 	);
 }
 
-export default Guests;
+export default GuestsDocs;
